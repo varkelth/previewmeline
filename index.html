@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Méline | Boulangerie Pâtisserie à Compiègne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2A1C14;
+            --accent-color: #D97736;
+            --bg-light: #FDFBF7;
+            --text-color: #4A3F35;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0; padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--primary-color); margin: 0; }
+
+        header {
+            background-color: var(--bg-light);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { text-align: center; }
+        .logo h1 { font-size: 2rem; letter-spacing: 2px; text-transform: uppercase; }
+        .logo span { font-size: 0.8rem; color: var(--accent-color); text-transform: uppercase; letter-spacing: 1.5px; }
+
+        .hero {
+            position: relative; height: 75vh;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2072&auto=format&fit=crop') center/cover;
+            color: white; padding: 0 20px;
+        }
+
+        .hero h2 { color: white; font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; font-weight: 300; }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 14px 35px;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover { background-color: #bf642b; transform: scale(1.05); }
+
+        .philosophy { padding: 4rem 10%; text-align: center; max-width: 800px; margin: 0 auto; }
+        .philosophy h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+
+        .products { padding: 4rem 5%; background-color: white; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
+
+        .grid { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+        .card { flex: 1; min-width: 300px; max-width: 350px; background: var(--bg-light); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .card img { width: 100%; height: 230px; object-fit: cover; }
+        .card-content { padding: 1.5rem; text-align: center; }
+
+        .highlight { display: flex; flex-wrap: wrap; background-color: var(--primary-color); color: white; }
+        .highlight-text { flex: 1; padding: 4rem; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
+        .highlight-text h2 { color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1rem; }
+        .highlight-text p { font-size: 1.2rem; margin-bottom: 2rem; color: #E8D8C8; }
+        .highlight-img { flex: 1; min-width: 300px; background: url('https://images.unsplash.com/photo-1608198093002-ad4e005484ec?q=80&w=2132&auto=format&fit=crop') center/cover; min-height: 400px; }
+
+        .contact { padding: 5rem 5%; text-align: center; }
+        .contact-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 3rem; max-width: 1100px; margin: 2rem auto; }
+        .contact-info { flex: 1; min-width: 250px; padding: 1rem; }
+        .contact-info h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent-color); }
+
+        footer { text-align: center; padding: 2rem; background-color: #1a110c; color: #666; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Méline</h1>
+            <span>Boulangerie • Pâtisserie Artisanale</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>L'art du bon pain.</h2>
+            <p>Artisan boulanger passionné au service des gourmands de Compiègne.</p>
+            <a href="#contact" class="btn">Nous trouver</a>
+        </div>
+    </section>
+
+    <section class="philosophy">
+        <h2>Le goût du travail bien fait</h2>
+        <p>Ici, chaque baguette est façonnée à la main et chaque pâtisserie raconte une histoire de saison. Nous sélectionnons les meilleures farines pour vous offrir une qualité irréprochable au quotidien.</p>
+    </section>
+
+    <section class="products">
+        <h2 class="section-title">Nos Spécialités</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=2070&auto=format&fit=crop" alt="Boulangerie">
+                <div class="card-content">
+                    <h3>Pains de Tradition</h3>
+                    <p>Des croûtes craquantes et des mies alvéolées pour accompagner tous vos repas.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?q=80&w=2070&auto=format&fit=crop" alt="Pâtisserie">
+                <div class="card-content">
+                    <h3>Pâtisserie Fine</h3>
+                    <p>La douceur de nos tartes maison et de nos entremets signature.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1926&auto=format&fit=crop" alt="Viennoiserie">
+                <div class="card-content">
+                    <h3>Viennoiseries</h3>
+                    <p>Le pur beurre pour un réveil tout en douceur et en croustillant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlight">
+        <div class="highlight-text">
+            <h2>L'irrésistible...</h2>
+            <p><strong>Notre Pain au Chocolat aux Amandes</strong></p>
+            <p>Une gourmandise dorée, fondante et croquante dont vous ne pourrez plus vous passer.</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Boulangerie+Pâtisserie+Méline+10+Rue+Solférino+Compiègne" target="_blank" class="btn">Venez le goûter</a>
+        </div>
+        <div class="highlight-img"></div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Infos Pratiques</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>📍 Adresse</h3>
+                <p>10 Rue Solférino<br>60200 Compiègne</p>
+                <br>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Boulangerie+Pâtisserie+Méline+10+Rue+Solférino+Compiègne" target="_blank" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Y aller maintenant</a>
+            </div>
+            <div class="contact-info">
+                <h3>🕒 Horaires</h3>
+                <p><strong>Mar - Sam :</strong> 07h00 - 19h30</p>
+                <p><strong>Dimanche :</strong> 07h00 - 19h00</p>
+                <p><strong>Lundi :</strong> Fermé</p>
+            </div>
+            <div class="contact-info">
+                <h3>📞 Téléphone</h3>
+                <p>03 44 86 57 30</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Boulangerie Pâtisserie Méline - Compiègne. Artisanat et Passion.</p>
+    </footer>
+
+</body>
+</html>
